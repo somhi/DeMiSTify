@@ -15,16 +15,20 @@ set_location_assignment PIN_B1 -to LEDS[1]
 #set_location_assignment PIN_M6 -to PIEZO
 #
 # RATON
-set_location_assignment PIN_T4 -to PS2_MCLK
-set_location_assignment PIN_R5 -to PS2_MDAT
+set_location_assignment PIN_T4 -to PS2_MOUSE_CLK
+set_location_assignment PIN_R5 -to PS2_MOUSE_DAT
 #
 # TECLADO
-set_location_assignment PIN_E7 -to PS2_CLK
-set_location_assignment PIN_F1 -to PS2_DAT
+set_location_assignment PIN_E7 -to PS2_KEYBOARD_CLK
+set_location_assignment PIN_F1 -to PS2_KEYBOARD_DAT
 #
 # SONIDO
 set_location_assignment PIN_J2 -to AUDIO_L
 set_location_assignment PIN_J1 -to AUDIO_R
+set_location_assignment PIN_T6 -to I2S_LRCK
+set_location_assignment PIN_T5 -to I2S_BCK
+set_location_assignment PIN_T7 -to I2S_DATA
+set_location_assignment PIN_R6 -to I2S_MCK
 #
 # MANDO 1 del raton DB9 (9 pines)
 set_location_assignment PIN_N11 -to JOYA[0]
@@ -45,8 +49,8 @@ set_location_assignment PIN_T3 -to JOYB[5]
 #set_location_assignment PIN_D15 -to UART_RXD
 #set_location_assignment PIN_C15 -to UART_TXD
 # PARA LA PLACA "TXAPELA-2", ademas, poner a "0" el bit de datos 
-set_location_assignment PIN_M7 -to UART_RXD
-set_location_assignment PIN_M8 -to UART_TXD
+set_location_assignment PIN_M7 -to UART_RX
+set_location_assignment PIN_M8 -to UART_TX
 #
 # VGA 666 (LA MARCA DEL DIABLO)
 set_location_assignment PIN_F8 -to VGA_R[0]

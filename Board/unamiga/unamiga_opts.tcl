@@ -40,6 +40,8 @@ set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING OFF
 set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS OFF
 set_global_assignment -name AUTO_RAM_TO_LCELL_CONVERSION OFF
 #
+set_global_assignment -name GENERATE_RBF_FILE ON
+#
 set_global_assignment -name FMAX_REQUIREMENT "114 MHz"
 set_global_assignment -name TPD_REQUIREMENT "2 ns"
 set_global_assignment -name TSU_REQUIREMENT "2 ns"
