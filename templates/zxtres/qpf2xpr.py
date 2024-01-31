@@ -172,7 +172,7 @@ def normalize_path(path, base_path):
     return path
 
 def write_file_paths_to_output(file_paths, output_path, target_fpga):
-    with open(output_path, 'a') as f:
+    with open(output_path, 'w') as f:
         f.write(f'# Create the project and directory structure\ncreate_project -force zxtres ./ -part {target_fpga}\n#\n# Add sources to the project\n')
         for path in file_paths:
             f.write(f"{path}\n")
@@ -222,10 +222,6 @@ def main():
     file_paths.append('set_property IS_GLOBAL_INCLUDE true [get_files ./build_id.v]')
     file_paths.append('set_property IS_GLOBAL_INCLUDE true [get_files ../defs_demistify.v]')
 
-    # Start Error catching block
-    with open(output_file, 'w') as f:
-        f.write(f'if {{[catch {{\n\n')
-            
     if file_paths:
         # Agregar todos los ficheros del proyecto al script TCL
         write_file_paths_to_output(file_paths, output_file, target_fpga)
@@ -313,7 +309,7 @@ def main():
             f.write(f"\nwait_on_run demist_zx3a200\n")
             f.write(f"\nputs \"Implementation ZXTRES A200T done!\"\n")
             f.write(f"}} errorstring]}} {{\n")
-            f.write("puts \"Error while creating A200T version.\nExiting Vivado\"\n")
+            f.write("put \"Error while creating A200T version.\nExiting Vivado\"\n")
             f.write(f"\nquit\n")
             f.write(f"}}\n")
 
@@ -325,7 +321,7 @@ def main():
             f.write(f"\nwait_on_run demist_zx3a100\n")
             f.write(f"\nputs \"Implementation ZXTRES A100T done!\"\n")
             f.write(f"}} errorstring]}} {{\n")
-            f.write("puts \"Error while creating A100T version.\nExiting Vivado\"\n")
+            f.write("put \"Error while creating A100T version.\nExiting Vivado\"\n")
             f.write(f"\nquit\n")
             f.write(f"}}\n")
 
@@ -337,7 +333,7 @@ def main():
             f.write(f"\nwait_on_run demist_zx3a35\n")
             f.write(f"\nputs \"Implementation ZXTRES A35T done!\"\n")
             f.write(f"}} errorstring]}} {{\n")
-            f.write("puts \"Error while creating A35T version.\nExiting Vivado\"\n")
+            f.write("put \"Error while creating A35T version.\nExiting Vivado\"\n")
             f.write(f"\nquit\n")
             f.write(f"}}\n")
 
@@ -346,11 +342,6 @@ def main():
         f.write(f"close_project\n")
         f.write(f"\nquit\n")
 
-        # End Error catching block
-        f.write(f'}} result]}} {{\n')
-        f.write(f'puts "Error while executing TCL script. Exiting Vivado"\n')
-        f.write(f"exit 1\n")
-        f.write(f'}}')
 
     crear_defs_vh()
     crear_build_id_v()
@@ -364,5 +355,3 @@ def main():
 
 main()
 
-#    error " File $filename could not be opened : $errorstring "
-  #}
