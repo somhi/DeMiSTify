@@ -5,6 +5,10 @@ set_location_assignment PIN_T2 -to CLOCK_50
 
 set_location_assignment PIN_E4 -to LED
 
+# KEY
+set_location_assignment PIN_W13 -to KEY[0]
+set_location_assignment PIN_Y13 -to KEY[1]
+
 #NEPTUNO VIDEO#
 set_location_assignment PIN_F1 -to VGA_R[5]
 set_location_assignment PIN_D2 -to VGA_R[4]
@@ -48,7 +52,7 @@ set_location_assignment PIN_AA18 -to JOYP7_O
 set_location_assignment PIN_A20 -to JOY_CLK
 set_location_assignment PIN_B19 -to JOY_DATA
 set_location_assignment PIN_B20 -to JOY_LOAD
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to JOY_DATA
+#set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to JOY_DATA
 
 #NEPTUNO AUDIO#
 set_location_assignment PIN_A3 -to AUDIO_L
@@ -79,7 +83,6 @@ set_location_assignment PIN_Y21 -to STM_RST
 #set_location_assignment PIN_M21 -to SPI_DO
 #set_location_assignment PIN_K22 -to SPI_DI
 #set_location_assignment PIN_R6 -to SPI_nWAIT  -- No asignado
-
 
 #NEPTUNO SDRAM#
 set_location_assignment PIN_V2 -to SDRAM_A[0]
@@ -164,5 +167,29 @@ set_location_assignment PIN_A10 -to SRAM_WE
 set_location_assignment PIN_AA20 -to SRAM_OE
 set_location_assignment PIN_R2 -to SRAM_UB
 set_location_assignment PIN_AA16 -to SRAM_LB
+
+
+##################  EDGE PINS ##################
+
+#PMOD4 SIGNALS ON MIDI2SBC ADDON
+#PIN_P22,    B14 _SPI CE0_MIDI CLKBD,   PMOD4_D0
+#PIN_B22,    A1  _SPI MOSI,             PMOD4_D1
+#PIN_AA14,   A28 _MISO_MIDI WSBD,       PMOD4_D2
+#PIN_N22,    B13 _SPI SCLK_MIDI DABD,   PMOD4_D3
+#PIN_M19,    B1  _UART_RX,              PMOD4_D4
+#PIN_U22,    B16 _UART_TX_MIDI,         PMOD4_D5
+#PIN_C22,    A2  _SPI CE1,              PMOD4_D6
+#PIN_AB13,   B27 _SPI CE2,              PMOD4_D7
+#
+set_location_assignment PIN_P22  -to EDGE_NMI
+set_location_assignment PIN_B22  -to EDGE_A14
+set_location_assignment PIN_AA14 -to EDGE_A11
+set_location_assignment PIN_N22  -to EDGE_INT
+#
+set_location_assignment PIN_M19  -to EDGE_A15
+set_location_assignment PIN_U22  -to EDGE_MREQ
+#
+set_location_assignment PIN_C22  -to EDGE_A12
+set_location_assignment PIN_AB13 -to EDGE_A10
 
 
