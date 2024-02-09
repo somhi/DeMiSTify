@@ -9,6 +9,8 @@
 #set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DETO1_PMOD2_6
 #set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to DETO2_PMOD2_7
 #
+#set_global_assignment -name SDC_FILE  constraints2.sdc
+#
 #set_global_assignment -name VERILOG_MACRO "USE_CLOCK_50=1"
 #set_global_assignment -name VERILOG_MACRO "VGA_8BIT=1"
 #set_global_assignment -name VERILOG_MACRO "USE_HDMI=1"

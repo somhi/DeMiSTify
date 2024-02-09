@@ -73,7 +73,10 @@ set_location_assignment PIN_G26 -to SDRAM_nCAS
 set_location_assignment PIN_G25 -to SDRAM_nWE
 set_location_assignment PIN_H26 -to SDRAM_nCS
 set_location_assignment PIN_K24 -to SDRAM_CKE
-set_location_assignment PIN_J23 -to SDRAM_CLK
+set_location_assignment PIN_E22 -to SDRAM_CLK
+# PIN_E22 is PLL4_CLKOUTP.  PIN_J23 is DIFFIO_R13N/DQ2R
+#set_location_assignment PIN_J23 -to SDRAM_CLK
+
 # ==========AUDIO============  
 set_location_assignment PIN_AD17 -to I2S_LRCK
 set_location_assignment PIN_AF17 -to I2S_BCK
@@ -157,7 +160,6 @@ set_location_assignment PIN_A9 -to BUS_USER3
 set_location_assignment PIN_B10 -to BUS_USER7
 set_location_assignment PIN_B11 -to BUS_IE0
 set_location_assignment PIN_A13 -to BUS_IE1
-
 
 # =========OTHERS============= UART PINS ALSO IN EXPANSION EXP_PIN_70 AND EXP_PIN_72 
 set_location_assignment PIN_A23 -to LED
