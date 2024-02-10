@@ -219,6 +219,7 @@ def main():
     file_paths.append('add_files -fileset constrs_1 {./zxtres.xdc}')
 
     file_paths.append('set_property IS_GLOBAL_INCLUDE true [get_files ./defs.vh]')
+    file_paths.append('set_property IS_GLOBAL_INCLUDE true [get_files ./defs.v]')
     file_paths.append('set_property IS_GLOBAL_INCLUDE true [get_files ./build_id.v]')
     file_paths.append('set_property IS_GLOBAL_INCLUDE true [get_files ../defs_demistify.v]')
 

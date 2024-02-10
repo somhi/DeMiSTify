@@ -1,5 +1,5 @@
-set_global_assignment -name FAMILY "MAX 10"
-set_global_assignment -name DEVICE 10M50DAF484C6GES
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE55F23C8
 set_global_assignment -name TOP_LEVEL_ENTITY zxtres_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
 set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
@@ -19,13 +19,6 @@ set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
-#set_global_assignment -name SEED 3
-set_global_assignment -name GENERATE_SVF_FILE ON
-
-# disable config pin so bank8 can use 1.2V 
-set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
-set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
-set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
 
 
 if {[info exists optimizeforspeed] && ($optimizeforspeed==1)} {

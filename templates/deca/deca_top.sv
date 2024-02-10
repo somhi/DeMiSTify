@@ -305,6 +305,15 @@ wire   spi_clk_int;
 	.VGA_G		(vga_green),
 	.VGA_B		(vga_blue),
 	
+	// .PS2K_CLK (ps2_keyboard_clk_in | intercept), // Block keyboard when OSD is active
+	// .PS2K_DAT (ps2_keyboard_dat_in),
+	// .PS2M_CLK (ps2_mouse_clk_in),
+	// .PS2M_DAT (ps2_mouse_dat_in),
+	// .PS2K_CLK_OUT (ps2_keyboard_clk_out), // Block keyboard when OSD is active
+	// .PS2K_DAT_OUT (ps2_keyboard_dat_out),
+	// .PS2M_CLK_OUT (ps2_mouse_clk_out),
+	// .PS2M_DAT_OUT (ps2_mouse_dat_out),
+
  	.*
 );
 

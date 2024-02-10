@@ -12,9 +12,9 @@ set topmodule "guest/"
 # derive_clock_uncertainty
 
 # Set pin definitions for downstream constraints
-set RAM_CLK SDRAM_CLK
+set RAM_CLK {SDRAM_CLK}
 set RAM_OUT {SDRAM_DQ* SDRAM_A* SDRAM_BA* SDRAM_n* SDRAM_DQM* SDRAM_CKE}
-set RAM_IN {SDRAM_DQ[*]}
+set RAM_IN  {SDRAM_DQ[*]}
 
 set VGA_OUT {VGA_R[*] VGA_G[*] VGA_B[*] VGA_HS VGA_VS}
 

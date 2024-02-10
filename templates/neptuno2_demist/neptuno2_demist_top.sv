@@ -167,8 +167,11 @@ assign joy2 = {2'b11, joy2_b12[4], joy2_b12[6], joy2_b12[0], joy2_b12[1], joy2_b
 // );
 
 
+
+////////// MIST GUEST TOP MODULE //////////
+
 `GUEST_TOP guest
- (
+(
 `ifdef USE_PLL_50_27
  	.CLOCK_27	(CLOCK_27),
 `else
@@ -179,7 +182,7 @@ assign joy2 = {2'b11, joy2_b12[4], joy2_b12[6], joy2_b12[0], joy2_b12[1], joy2_b
 `endif
 
 	.LED      	(~LED1),
-   
+
 	.*
 
 	// .PS2K_CLK_IN  ( ps2_keyboard_clk_in || intercept ), // Block keyboard when OSD is active
@@ -191,7 +194,6 @@ assign joy2 = {2'b11, joy2_b12[4], joy2_b12[6], joy2_b12[0], joy2_b12[1], joy2_b
 	// .PS2K_MOUSE_DAT_IN  ( ps2_mouse_dat_in ),
 	// .PS2K_MOUSE_CLK_OUT ( ps2_mouse_clk_out ),
 	// .PS2K_MOUSE_DAT_OUT ( ps2_mouse_dat_out )
-
 );
 
 
@@ -215,9 +217,9 @@ substitute_mcu #(
 ) 
 controller
 (
- .clk (CLOCK_50),
- .reset_in(KEY0),			//	reset_in  when 0
- .reset_out(reset_n),		//	reset_out  when 0	
+ .clk          (CLOCK_50),
+ .reset_in     (KEY0),			//reset_in  when 0
+ .reset_out    (reset_n),		//reset_out  when 0
  
  .spi_miso     (SD_MISO),
  .spi_mosi     (SD_MOSI),
@@ -248,10 +250,10 @@ controller
  .joy1         (joy1),
  .joy2         (joy2),
 
- // UART
- .rxd  		   (rs232_rxd),
- .txd  		   (rs232_txd),
- 
+//  // UART
+//  .rxd  			(rs232_rxd),
+//  .txd  			(rs232_txd),
+
  // intercept=1 when OSD is on
  .intercept    (intercept)
 );

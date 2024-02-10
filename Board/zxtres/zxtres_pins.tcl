@@ -37,12 +37,6 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to PS2_KEYBOARD_DAT
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to PS2_MOUSE_CLK
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to PS2_MOUSE_DAT
 
-#UART
-# shared with PS2_MOUSE_CLK
-#set_location_assignment PIN_C21 -to UART_RXD
-# shared with -to PS2_MOUSE_DAT
-#set_location_assignment PIN_B21 -to UART_TXD
-
 #NEPTUNO JOYSTICKS#
 set_location_assignment PIN_AA18 -to JOYP7_O
 set_location_assignment PIN_A20 -to JOY_CLK
@@ -109,48 +103,3 @@ set_location_assignment PIN_AA4 -to SDRAM_nCAS
 set_location_assignment PIN_W6 -to SDRAM_CKE
 set_location_assignment PIN_Y6 -to SDRAM_CLK
 set_location_assignment PIN_AA3 -to SDRAM_nCS
-
-#NEPTUNO SRAM#
-set_location_assignment PIN_AB15 -to SRAM_A[20]
-set_location_assignment PIN_U21 -to SRAM_A[19]
-set_location_assignment PIN_A17 -to SRAM_A[18]
-set_location_assignment PIN_B18 -to SRAM_A[17]
-set_location_assignment PIN_A18 -to SRAM_A[16]
-set_location_assignment PIN_A19 -to SRAM_A[15]
-set_location_assignment PIN_A5 -to SRAM_A[14]
-set_location_assignment PIN_A15 -to SRAM_A[13]
-set_location_assignment PIN_B6 -to SRAM_A[12]
-set_location_assignment PIN_A14 -to SRAM_A[11]
-set_location_assignment PIN_A8 -to SRAM_A[10]
-set_location_assignment PIN_B13 -to SRAM_A[9]
-set_location_assignment PIN_B10 -to SRAM_A[8]
-set_location_assignment PIN_B14 -to SRAM_A[7]
-set_location_assignment PIN_B15 -to SRAM_A[6]
-set_location_assignment PIN_B9 -to SRAM_A[5]
-set_location_assignment PIN_A7 -to SRAM_A[4]
-set_location_assignment PIN_A6 -to SRAM_A[3]
-set_location_assignment PIN_B5 -to SRAM_A[2]
-set_location_assignment PIN_C3 -to SRAM_A[1]
-set_location_assignment PIN_A4 -to SRAM_A[0]
-set_location_assignment PIN_F21 -to SRAM_Q[15]
-set_location_assignment PIN_J22 -to SRAM_Q[14]
-set_location_assignment PIN_L21 -to SRAM_Q[13]
-set_location_assignment PIN_M22 -to SRAM_Q[12]
-set_location_assignment PIN_L22 -to SRAM_Q[11]
-set_location_assignment PIN_H22 -to SRAM_Q[10]
-set_location_assignment PIN_H21 -to SRAM_Q[9]
-set_location_assignment PIN_F22 -to SRAM_Q[8]
-set_location_assignment PIN_B17 -to SRAM_Q[7]
-set_location_assignment PIN_A16 -to SRAM_Q[6]
-set_location_assignment PIN_B16 -to SRAM_Q[5]
-set_location_assignment PIN_C4 -to SRAM_Q[4]
-set_location_assignment PIN_A9 -to SRAM_Q[3]
-set_location_assignment PIN_B8 -to SRAM_Q[2]
-set_location_assignment PIN_A13 -to SRAM_Q[1]
-set_location_assignment PIN_B7 -to SRAM_Q[0]
-set_location_assignment PIN_A10 -to SRAM_WE
-set_location_assignment PIN_AA20 -to SRAM_OE
-set_location_assignment PIN_R2 -to SRAM_UB
-set_location_assignment PIN_AA16 -to SRAM_LB
-
-

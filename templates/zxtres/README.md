@@ -4,5 +4,5 @@ For more info about [DeMiSTify](https://github.com/robinsonb5/DeMiSTify) checkou
 
 https://github.com/somhi/DeMiSTify/wiki/Add-ZXtres-target
 
-Note: **First time you open Vivado please make a copy in zxtres folder and change location of main core constraint file (e.g. msx_mist.sdc to $PPRDIR/msx_mist.sdc)**
+Note: **First time opening Vivado copy the main core constraint file (e.g. msx_mist.sdc) in zxtres folder and change its location in xpr project file (e.g. $PPRDIR/msx_mist.sdc)**
 
