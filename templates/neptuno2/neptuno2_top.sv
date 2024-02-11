@@ -62,6 +62,7 @@ module neptuno2_top (
 	// output        JOY_SEL
 );
 
+wire   LED;
 
 `ifdef USE_PLL_50_27
 wire CLOCK_27;
@@ -81,14 +82,14 @@ pll_50_27 u_pll_50_27 (
 `else
  	.CLOCK_27	(CLOCK_50),
 `endif
-`ifdef USE_CLOCK_50
- 	.CLOCK_50 	(CLOCK_50),
-`endif
+// `ifdef USE_CLOCK_50
+//  	.CLOCK_50 	(CLOCK_50),
+// `endif
 
- .LED      	 (~LED1),
-
- .*
+ 	.*
 
 );
+
+assign LED1 = ~LED;
 
 endmodule
