@@ -34,7 +34,7 @@ set_location_assignment PIN_B9 -to SPI_SS3
 set_location_assignment PIN_B21 -to SPI_SS4
 
 
-# ==========DRAM=============
+# ==========SDRAM=============
 set_location_assignment PIN_L25 -to SDRAM_A[0]
 set_location_assignment PIN_L26 -to SDRAM_A[1]
 set_location_assignment PIN_M25 -to SDRAM_A[2]
@@ -175,11 +175,9 @@ set_location_assignment PIN_AD23 -to KEY0
 set_location_assignment PIN_AD24 -to KEY1
 #============================
 
-set_location_assignment PLL_1 -to "pll:pll|altpll:altpll_component"
+#set_location_assignment PLL_1 -to "pll:pll|altpll:altpll_component"
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SDRAM_DQ[0]
-
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SDRAM_DQ[1]
-
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SDRAM_DQ[2]
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SDRAM_DQ[3]
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to SDRAM_DQ[4]

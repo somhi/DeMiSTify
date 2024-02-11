@@ -35,7 +35,6 @@ set_global_assignment -name OPTIMIZE_HOLD_TIMING "ALL PATHS"
 set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING ON                                                                           
 set_global_assignment -name FITTER_EFFORT "AUTO FIT"                       
 
-
 # Assembler Assignments
 # =====================
 
