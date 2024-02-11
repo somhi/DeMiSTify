@@ -53,6 +53,7 @@ module neptuno2_demist_top (
 );
 
 wire reset_n;
+wire   LED;
 
 wire SPI_SCK,SPI_DO,SPI_DI,SPI_SS2,SPI_SS3,CONF_DATA0;
 `ifndef NO_DIRECT_UPLOAD
@@ -177,11 +178,9 @@ assign joy2 = {2'b11, joy2_b12[4], joy2_b12[6], joy2_b12[0], joy2_b12[1], joy2_b
 `else
  	.CLOCK_27	(CLOCK_50),
 `endif
-`ifdef USE_CLOCK_50
- 	.CLOCK_50 	(CLOCK_50),
-`endif
-
-	.LED      	(~LED1),
+// `ifdef USE_CLOCK_50
+//  	.CLOCK_50 	(CLOCK_50),
+// `endif
 
 	.*
 
@@ -195,6 +194,8 @@ assign joy2 = {2'b11, joy2_b12[4], joy2_b12[6], joy2_b12[0], joy2_b12[1], joy2_b
 	// .PS2K_MOUSE_CLK_OUT ( ps2_mouse_clk_out ),
 	// .PS2K_MOUSE_DAT_OUT ( ps2_mouse_dat_out )
 );
+
+assign LED1 = ~LED;
 
 
 //////////    SUBSTITUTE MCU    //////////

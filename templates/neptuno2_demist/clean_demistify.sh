@@ -1,7 +1,8 @@
-#find ../firmware/ -type f \( ! -iname "*.h" ! -iname "*.c" ! -iname "*.vhd" \) -delete
-find output_files/ -type f \( ! -iname "*.sof" ! -iname "*.rbf" ! -iname "*.flow.rpt" ! -iname "*.sta.rpt" \) -delete
-#rm -f output_files/*_pof.svf
-#find output_files/  -type f -not -name '*.sof' -delete
+#demistify
+#find ../firmware/ -type f \( ! -iname "*.h" ! -iname "*.c" \) -delete
+rm -f Atari800XL_*
+#quartus
+find output_files/ -type f \(  ! -iname "*.sof"  ! -iname "*.np1" ! -iname "*.rbf" ! -iname "*.flow.rpt" \) -delete
 find software/spl_bsp/ -type f -not -name '*.bin' -delete
 #rm -rf output_files
 #rm -rf software

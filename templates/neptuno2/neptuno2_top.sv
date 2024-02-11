@@ -76,7 +76,7 @@ pll_50_27 u_pll_50_27 (
 
 
 `GUEST_TOP guest
- (
+(
 `ifdef USE_PLL_50_27
  	.CLOCK_27	(CLOCK_27),
 `else

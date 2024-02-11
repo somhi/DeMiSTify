@@ -4,7 +4,7 @@ create_clock -name spiclk  -period 41.666 -waveform { 20.8 41.666 } [get_ports {
 
 set mist 1
 
-set hostclk { clk_50 }
+set hostclk    { clk_50 }
 set supportclk { clk_50 }
 
 derive_pll_clocks -create_base_clocks
@@ -17,8 +17,8 @@ set RAM_IN  {SDRAM_DQ[*]}
 
 set VGA_OUT {VGA_R[*] VGA_G[*] VGA_B[*] VGA_HS VGA_VS}
 
-set FALSE_OUT {AUDIO_L AUDIO_R LED* UART_TX}
-set FALSE_IN  {UART_RX}
+set FALSE_OUT {AUDIO_L AUDIO_R I2S_* LED* UART_TX}
+set FALSE_IN {UART_RX AUDIO_IN KEY*}
 
 # Constraints for board-specific signals
 set_input_delay  -clock spiclk -min 0.5 { SPI_DO CONF_DATA0 SPI_DI SPI_SS2 SPI_SS3 }

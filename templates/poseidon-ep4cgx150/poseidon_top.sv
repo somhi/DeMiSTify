@@ -1,4 +1,3 @@
-
 module poseidon_top (
 	input         CLOCK_50,
 	output        LED,
