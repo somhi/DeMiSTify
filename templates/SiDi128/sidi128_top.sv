@@ -134,7 +134,9 @@ localparam bit BIG_OSD = 0;
 localparam SEP = "";
 `endif
 
-
+`ifdef USE_HDMI
+localparam bit USE_HDMI = 1;
+`endif
 
 guest_top guest
 (
