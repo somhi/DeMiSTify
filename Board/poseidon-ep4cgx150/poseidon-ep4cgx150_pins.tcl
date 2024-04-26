@@ -163,8 +163,8 @@ set_location_assignment PIN_A13 -to BUS_IE1
 
 # =========OTHERS============= UART PINS ALSO IN EXPANSION EXP_PIN_70 AND EXP_PIN_72 
 set_location_assignment PIN_A23 -to LED
-set_location_assignment PIN_AE5 -to UART_RX
-set_location_assignment PIN_AF4 -to UART_TX
+set_location_assignment PIN_C5 -to UART_RX
+set_location_assignment PIN_B2 -to UART_TX
 
 # QMTech Leds  (0 = led on)
 set_location_assignment PIN_A25 -to LED1
